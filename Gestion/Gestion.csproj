@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{730105C0-75C9-47BD-B8D9-D60BA28B4074}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gestion</RootNamespace>
+    <AssemblyName>Gestion</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\Achat.cs" />
+    <Compile Include="classes\Client.cs" />
+    <Compile Include="classes\Fournisseurs.cs" />
+    <Compile Include="classes\Produits.cs" />
+    <Compile Include="classes\Users.cs" />
+    <Compile Include="classes\Vente.cs" />
+    <Compile Include="Forms\Clients Form\AddClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clients Form\AddClient.Designer.cs">
+      <DependentUpon>AddClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clients Form\ClientsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clients Form\ClientsList.Designer.cs">
+      <DependentUpon>ClientsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clients Form\DeleteClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clients Form\DeleteClient.Designer.cs">
+      <DependentUpon>DeleteClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clients Form\SearchClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clients Form\SearchClient.Designer.cs">
+      <DependentUpon>SearchClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clients Form\UpdateClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clients Form\UpdateClient.Designer.cs">
+      <DependentUpon>UpdateClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientsForm.Designer.cs">
+      <DependentUpon>ClientsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Products Form\AddProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Products Form\AddProducts.Designer.cs">
+      <DependentUpon>AddProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Products Form\DeleteProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Products Form\DeleteProducts.Designer.cs">
+      <DependentUpon>DeleteProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Products Form\ProductsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Products Form\ProductsList.Designer.cs">
+      <DependentUpon>ProductsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Products Form\SearchProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Products Form\SearchProducts.Designer.cs">
+      <DependentUpon>SearchProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Products Form\UpdateProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Products Form\UpdateProducts.Designer.cs">
+      <DependentUpon>UpdateProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProductsForm.Designer.cs">
+      <DependentUpon>ProductsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase Form\AddPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase Form\AddPurchase.Designer.cs">
+      <DependentUpon>AddPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase Form\DeletePurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase Form\DeletePurchase.Designer.cs">
+      <DependentUpon>DeletePurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase Form\PurchaseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase Form\PurchaseList.Designer.cs">
+      <DependentUpon>PurchaseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase Form\SearchPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase Form\SearchPurchase.Designer.cs">
+      <DependentUpon>SearchPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase Form\UpdatePurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase Form\UpdatePurchase.Designer.cs">
+      <DependentUpon>UpdatePurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PurchaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PurchaseForm.Designer.cs">
+      <DependentUpon>PurchaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sale Form\AddSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale Form\AddSale.Designer.cs">
+      <DependentUpon>AddSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sale Form\DeleteSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale Form\DeleteSale.Designer.cs">
+      <DependentUpon>DeleteSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sale Form\SaleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale Form\SaleList.Designer.cs">
+      <DependentUpon>SaleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sale Form\SearchSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale Form\SearchSale.Designer.cs">
+      <DependentUpon>SearchSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sale Form\UpdateSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale Form\UpdateSale.Designer.cs">
+      <DependentUpon>UpdateSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SaleForm.Designer.cs">
+      <DependentUpon>SaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Suppliers Form\AddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Suppliers Form\AddSupplier.Designer.cs">
+      <DependentUpon>AddSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Suppliers Form\DeleteSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Suppliers Form\DeleteSupplier.Designer.cs">
+      <DependentUpon>DeleteSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Suppliers Form\SearchSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Suppliers Form\SearchSupplier.Designer.cs">
+      <DependentUpon>SearchSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Suppliers Form\SuppliersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Suppliers Form\SuppliersList.Designer.cs">
+      <DependentUpon>SuppliersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Suppliers Form\UpdateSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Suppliers Form\UpdateSupplier.Designer.cs">
+      <DependentUpon>UpdateSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SuppliersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SuppliersForm.Designer.cs">
+      <DependentUpon>SuppliersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users Form\AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users Form\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users Form\AllUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users Form\AllUsers.Designer.cs">
+      <DependentUpon>AllUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users Form\DeleteUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users Form\DeleteUser.Designer.cs">
+      <DependentUpon>DeleteUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users Form\SearchUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users Form\SearchUser.Designer.cs">
+      <DependentUpon>SearchUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users Form\UpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users Form\UpdateUser.Designer.cs">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users Form\UsersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users Form\UsersList.Designer.cs">
+      <DependentUpon>UsersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\usersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\usersForm.Designer.cs">
+      <DependentUpon>usersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDao\IDao.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Achatimp.cs" />
+    <Compile Include="Services\Clientimp.cs" />
+    <Compile Include="Services\Fournisseursimp.cs" />
+    <Compile Include="Services\Produitsimp.cs" />
+    <Compile Include="Services\Usersimp.cs" />
+    <Compile Include="Services\Venteimp.cs" />
+    <EmbeddedResource Include="Forms\Clients Form\AddClient.resx">
+      <DependentUpon>AddClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clients Form\ClientsList.resx">
+      <DependentUpon>ClientsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clients Form\DeleteClient.resx">
+      <DependentUpon>DeleteClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clients Form\SearchClient.resx">
+      <DependentUpon>SearchClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clients Form\UpdateClient.resx">
+      <DependentUpon>UpdateClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClientsForm.resx">
+      <DependentUpon>ClientsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Products Form\AddProducts.resx">
+      <DependentUpon>AddProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Products Form\DeleteProducts.resx">
+      <DependentUpon>DeleteProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Products Form\ProductsList.resx">
+      <DependentUpon>ProductsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Products Form\SearchProducts.resx">
+      <DependentUpon>SearchProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Products Form\UpdateProducts.resx">
+      <DependentUpon>UpdateProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProductsForm.resx">
+      <DependentUpon>ProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase Form\AddPurchase.resx">
+      <DependentUpon>AddPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase Form\DeletePurchase.resx">
+      <DependentUpon>DeletePurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase Form\PurchaseList.resx">
+      <DependentUpon>PurchaseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase Form\SearchPurchase.resx">
+      <DependentUpon>SearchPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase Form\UpdatePurchase.resx">
+      <DependentUpon>UpdatePurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PurchaseForm.resx">
+      <DependentUpon>PurchaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sale Form\AddSale.resx">
+      <DependentUpon>AddSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sale Form\DeleteSale.resx">
+      <DependentUpon>DeleteSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sale Form\SaleList.resx">
+      <DependentUpon>SaleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sale Form\SearchSale.resx">
+      <DependentUpon>SearchSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sale Form\UpdateSale.resx">
+      <DependentUpon>UpdateSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SaleForm.resx">
+      <DependentUpon>SaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Suppliers Form\AddSupplier.resx">
+      <DependentUpon>AddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Suppliers Form\DeleteSupplier.resx">
+      <DependentUpon>DeleteSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Suppliers Form\SearchSupplier.resx">
+      <DependentUpon>SearchSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Suppliers Form\SuppliersList.resx">
+      <DependentUpon>SuppliersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Suppliers Form\UpdateSupplier.resx">
+      <DependentUpon>UpdateSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SuppliersForm.resx">
+      <DependentUpon>SuppliersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users Form\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users Form\AllUsers.resx">
+      <DependentUpon>AllUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users Form\DeleteUser.resx">
+      <DependentUpon>DeleteUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users Form\SearchUser.resx">
+      <DependentUpon>SearchUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users Form\UpdateUser.resx">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users Form\UsersList.resx">
+      <DependentUpon>UsersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\usersForm.resx">
+      <DependentUpon>usersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lockblue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoutblue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power-buttonblue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-loginblue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-loginm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-loginm1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-loginm2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-login120.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-login80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-login50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-login40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clients40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fournisseurs40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produits.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\achat40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vente40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fournisseurs40b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clients40b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\achat40b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vente40b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produitsb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users40b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back40.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
